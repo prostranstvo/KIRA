@@ -1,0 +1,63 @@
+.HERO {
+  background-color: #d9d9d9e8;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.HERO .div {
+  background-color: #d9d9d9e8;
+  width: 1440px;
+  height: 900px;
+  position: relative;
+}
+
+.HERO .you-re-invited-to {
+  position: absolute;
+  width: 1200px;
+  top: 78px;
+  left: 120px;
+  text-shadow: 0px 4px 4px #000000b0;
+  font-family: "Nerko One-Regular", Helvetica;
+  font-weight: 400;
+  color: #ad3a3a;
+  font-size: 76px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.HERO .whatsapp-image {
+  position: absolute;
+  width: 415px;
+  height: 623px;
+  top: 199px;
+  left: 830px;
+  object-fit: cover;
+}
+
+.HERO .we-d-love-for-you-to {
+  position: absolute;
+  width: 604px;
+  height: 625px;
+  top: 198px;
+  left: 179px;
+  text-shadow: 0px 4px 4px #00000040;
+  font-family: "Neucha-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 49px;
+  letter-spacing: -2.94px;
+  line-height: 49px;
+}
+
+.HERO .text-wrapper {
+  letter-spacing: -1.44px;
+}
+
+.HERO .span {
+  letter-spacing: -1.44px;
+  text-decoration: underline;
+}
