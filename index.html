@@ -1,136 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kira's Birthday Party Invitation</title>
-    <style>
-        /* --- CSS Styles --- */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kira's Birthday Party Invitation</title>
+    <style>
+        /* --- CSS Styles --- */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            /* Consistent padding around the entire page content */
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
 
-        .flyer {
-            background-color: #e8e8e8;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            width: 90%;
-            border: 1px solid #ccc;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            display: flex; /* Added for flexbox layout */
-            flex-direction: column; /* Stack items vertically by default */
-            align-items: stretch; /* Stretch items to container width */
-        }
+        .flyer {
+            background-color: #e8e8e8;
+            /* Consistent padding inside the flyer border */
+            padding: 30px;
+            border-radius: 15px; /* Overall flyer corner rounding */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 90%;
+            border: 1px solid #ccc; /* Subtle border */
+            /* Consistent top/bottom margin for spacing */
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
 
-        h1 {
-            color: #d9534f;
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.5em;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-        }
+        h1 {
+            color: #d9534f;
+            text-align: center;
+            margin-bottom: 30px; /* Space below heading */
+            font-size: 2.5em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
 
-        .content {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-            align-items: flex-start; /* Align items to the start (top in column direction) */
-        }
+        .content {
+            display: flex;
+             /* Align items to the top of the container */
+            align-items: flex-start; /* Changed back from center */
+            /* Consistent gap between text and image */
+            gap: 30px;
+            flex-wrap: wrap;
+        }
 
-        .text-details {
-            flex: 2;
-            min-width: 250px;
-            line-height: 1.6;
-            font-size: 1.1em;
-            color: #333;
-        }
+        .text-details {
+            /* Text takes roughly 2/3rds of the space */
+            flex: 2;
+            min-width: 250px;
+            line-height: 1.6;
+            font-size: 1.1em;
+            color: #333;
+        }
 
-        .text-details p {
-            margin-top: 0;
-            margin-bottom: 15px;
-        }
+        .text-details p {
+            margin-top: 0;
+            margin-bottom: 15px; /* Consistent spacing between paragraphs */
+        }
 
-        .text-details strong {
-            color: #555;
-            font-weight: bold;
-        }
+        .text-details strong {
+            color: #555;
+            font-weight: bold;
+        }
 
-        .image-container {
-            flex: 1;
-            min-width: 200px;
-            text-align: center;
-        }
+        .image-container {
+             /* Image takes roughly 1/3rd of the space */
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
 
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            display: block;
-            margin: 0 auto;
-        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px; /* Image corner rounding */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: block;
+            margin: 0 auto;
+        }
 
-        /* --- Responsiveness --- */
+        /* --- Responsiveness --- */
 
-        @media (max-width: 650px) {
-            body {
-                padding: 10px;
-            }
-            h1 {
-                font-size: 2em;
-            }
+        /* On screens smaller than 650px */
+        @media (max-width: 650px) {
+            body {
+                /* Reduced padding on smaller screens */
+                padding: 10px;
+            }
+            h1 {
+                font-size: 2em;
+            }
 
-            .content {
-                flex-direction: column;
-                align-items: center;
-                gap: 20px;
-            }
+            .content {
+                flex-direction: column;
+                /* Alignment changes to center when stacked */
+                align-items: center;
+                 /* Reduced gap when stacked */
+                gap: 20px;
+            }
 
-            .text-details {
-                text-align: center;
-                margin-bottom: 20px;
-                flex-basis: auto;
-                width: 100%;
-            }
+            .text-details {
+               text-align: center;
+               margin-bottom: 20px;
+	             margin-left: 40px;
+               /* Reset flex properties for column layout */
+               flex-basis: auto;
+               width: 100%;
+            }
 
-            .image-container {
-                width: 80%;
-                max-width: 300px;
-                flex-basis: auto;
-            }
+            .image-container {
+                width: 80%;
+                max-width: 300px;
+                 /* Reset flex properties for column layout */
+                flex-basis: auto;
+            }
 
-            .flyer {
-                padding: 20px;
-                width: 95%;
-            }
-        }
-    </style>
+             .flyer {
+                 /* Reduced padding inside flyer on smaller screens */
+                padding: 20px;
+                width: 95%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="flyer">
-        <h1>You're Invited to Kira's Birthday Party!</h1>
-        <div class="content">
-            <div class="text-details">
-                <p>We'd love for you to join us as we celebrate Kira's 5th birthday!</p>
-                <p>We'll have cake, snacks, and simple games and activities at <strong>Ramsden Park</strong> on <strong>April 12th at 2:00 PM</strong>.</p>
-                <p>Please let Elija & Elena know if you can make it!</p>
-                <p>You can reach them at <strong>416-826-1220</strong>.</p>
-                <p>We can't wait to celebrate with you!</p>
-            </div>
-            <div class="image-container">
-                <img src="image_421bcd.jpg" alt="Cartoon character eating" onerror="this.alt='Image failed to load'; this.src='https://placehold.co/300x200/cccccc/ffffff?text=Image+Not+Found';">
-            </div>
-        </div>
-    </div>
+    <div class="flyer">
+        <h1>You're Invited to Kira's Birthday Party!</h1>
+
+        <div class="content">
+            <div class="text-details">
+                <p>We'd love for you to join us as we celebrate Kira's 5th birthday!</p>
+                <p>We'll have cake, snacks, and simple games and activities at <strong>Ramsden Park</strong> on <strong>April 12th at 2:00 PM</strong>.</p>
+                <p>Please let Elija & Elena know if you can make it!</p>
+                <p>You can reach them at <strong>416-826-1220</strong>.</p>
+                <p>We can't wait to celebrate with you!</p>
+            </div>
+            <div class="image-container">
+                <img src="image_421bcd.jpg" alt="Cartoon character eating" onerror="this.alt='Image failed to load'; this.src='https://placehold.co/300x200/cccccc/ffffff?text=Image+Not+Found';">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
